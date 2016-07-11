@@ -1,4 +1,9 @@
 source "https://rubygems.org"
-gem "cucumber"
-gem 'rspec'
-gem 'monetize'
+
+gem 'sinatra'
+
+group :development do
+  gem "cucumber"
+  gem 'rspec'
+  gem 'monetize'
+end

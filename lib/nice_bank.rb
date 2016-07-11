@@ -1,0 +1,34 @@
+class Account
+	def credit(amount)
+		@balance = amount
+	end
+
+  def debit(amount)
+    @balance -= amount
+  end
+
+	def balance
+		@balance
+	end
+end
+
+class Teller
+  def initialize(cash_slot)
+    @cash_slot = cash_slot
+  end
+
+  def withdraw_from(account, amount)
+    account.debit(amount)
+    @cash_slot.dispence(amount)
+  end
+end
+
+class CashSlot
+  def contents
+    @contents or raise("I'm empty!")
+  end
+
+  def dispence(amount)
+    @contents = amount
+  end
+end

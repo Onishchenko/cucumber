@@ -9,3 +9,4 @@ Feature: Adding
     	| input | output |
     	| 2+2   | 4      |
     	| 98+1  | 99     |
+    	| 98+1  | 99     |
